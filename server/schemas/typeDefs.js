@@ -1,5 +1,5 @@
 
-const typeDefs = gql`
+const typeDefs = `
 type Book {
   bookId: ID!
   authors: [String]
