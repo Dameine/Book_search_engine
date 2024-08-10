@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const {Graphql} = require('graphql');
+const {GraphQLError} = require('graphql');
 
 // set token secret and expiration date
 const secret = 'mysecretsshhhhh';
@@ -8,7 +8,7 @@ const expiration = '2h';
 module.exports = {
 
   // function for our unauthenticated routes
-  AuthenticationError : new Graphql.GraphQLError('You must log in first.',{
+  AuthenticationError : new GraphQLError('You must log in first.',{
     extensions: {
       code: 'UNAUTHENTICATED',
     },
