@@ -1,4 +1,6 @@
-const typeDefs = `
+const { gql } = require('apollo/server');
+
+const typeDefs = gql`
 type Book {
   bookId: ID!
   authors: [String]
